@@ -10,6 +10,14 @@ const getHomePage = async (req, res) => {
         console.log(err);
     }
 };
+let getCRUD=(req,res)=>{
+    return res.render('crud.ejs')
+}
+let postCRUD=(req,res)=>{
+    res.send(req.body);
+}
 module.exports = {
+    postCRUD: postCRUD,
+    getCRUD: getCRUD,
     getHomePage: getHomePage,
 };
